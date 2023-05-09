@@ -1,7 +1,7 @@
 modLoader = "kotlinforforge"
 loaderVersion = "[3,)"
 license = "MIT"
-issueTrackerURL = "https://11515/upd8r/issues"
+issueTrackerURL = "https://github.com/Tki-sor/Upd8r/issues"
 
 [[mods]]
 modId = "upd8r"
@@ -9,8 +9,9 @@ version = "${version}"
 displayName = "upd8r"
 logoFile = "icon.png"
 authors = "Tki_sor"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/upd8r"
 description = '''
-
+More Powerful Modpack Update Check Mod.
 '''
 
 [[dependencies.upd8r]]
