@@ -6,7 +6,7 @@ issueTrackerURL = "https://github.com/Tki-sor/Upd8r/issues"
 [[mods]]
 modId = "upd8r"
 version = "${version}"
-displayName = "upd8r"
+displayName = "Upd8r"
 logoFile = "icon.png"
 authors = "Tki_sor"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/upd8r"
@@ -17,20 +17,20 @@ More Powerful Modpack Update Check Mod.
 [[dependencies.upd8r]]
 modId = "forge"
 mandatory = true
-versionRange = "[43,)"
+versionRange = "[45,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.upd8r]]
 modId = "cloth_config"
 mandatory = true
-versionRange = "[8.0,)"
+versionRange = "[10.0,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.upd8r]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,1.20)"
+versionRange = "[1.19.4,1.20)"
 ordering = "NONE"
 side = "BOTH"
