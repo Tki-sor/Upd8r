@@ -1,0 +1,21 @@
+{
+    "versionName" : "1.0.0.0",
+    "versionCode" : 25565,
+    "versionFormat" : "%versionName% or %versionCode%",
+    "updateURL" : {
+        "en_us" : "https://github.com/Tki-sor/Upd8r"
+    },
+        "changelogs" : {
+        "1.0.0" : [
+            "awa"
+        ],
+        "2.0.0" : [
+            "qwq"
+        ]
+    },
+    "welcomeMessage" : {
+        "tag" : ["awa1"],
+        "tag2" : ["awa2"],
+        "tag3" : ["advancements.story.mine_stone.title"]
+    }
+}

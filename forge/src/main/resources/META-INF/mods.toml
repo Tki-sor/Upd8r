@@ -1,0 +1,35 @@
+modLoader = "kotlinforforge"
+loaderVersion = "[3,)"
+license = "MIT"
+issueTrackerURL = "https://11515/upd8r/issues"
+
+[[mods]]
+modId = "upd8r"
+version = "${version}"
+displayName = "upd8r"
+logoFile = "icon.png"
+authors = "Tki_sor"
+description = '''
+
+'''
+
+[[dependencies.upd8r]]
+modId = "forge"
+mandatory = true
+versionRange = "[43,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.upd8r]]
+modId = "cloth_config"
+mandatory = true
+versionRange = "[8.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.upd8r]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19.2,1.20)"
+ordering = "NONE"
+side = "BOTH"
