@@ -13,7 +13,7 @@ object InfoUtil {
     fun upd8rComponent(): MutableComponent {
         val component = Component.empty()
         val instance = Language.getInstance()
-        val langCode = Minecraft.getInstance().languageManager.selected.code
+        val langCode = Minecraft.getInstance().languageManager.selected
         val updateLink = Component.translatable("text.upd8r.update_link")
 
         when (isUpd8r()) {

@@ -1,0 +1,10 @@
+{
+  "text.upd8r.separator": "§5========================================§r",
+  "text.upd8r.update_chat_message_title": "§b§lMODPACK UPDATE AVAILABLE!§r",
+  "text.upd8r.current_version": "§6Current Version:%s§r",
+  "text.upd8r.latest_version": "§2Latest Version:%s§r",
+  "text.upd8r.update_link": "§b§l§nUpdate Link§r",
+  "text.upd8r.changelogs": "Changelogs:",
+  "text.upd8r.update_link_tooltip": "§eClick to open update link!§r",
+  "text.upd8r.update_check_failed": "§cFailed to check for modpack update, please check your Internet connection. If you believe it's not your problem please report this to the modpack author.§r"
+}
