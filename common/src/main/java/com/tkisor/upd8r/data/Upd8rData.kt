@@ -4,8 +4,6 @@ import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.google.gson.reflect.TypeToken
 import com.tkisor.upd8r.util.WebJsonUtil
-import com.tkisor.upd8r.util.asString
-import net.minecraft.network.chat.Component
 
 object Upd8rData {
     var versionName: String? = null

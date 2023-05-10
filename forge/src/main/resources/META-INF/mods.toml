@@ -1,7 +1,7 @@
-modLoader = "kotlinforforge"
-loaderVersion = "[3,)"
+modLoader = "javafml"
+loaderVersion = "[43,)"
 license = "MIT"
-issueTrackerURL = "https://11515/upd8r/issues"
+issueTrackerURL = "https://github.com/Tki-sor/Upd8r/issues"
 
 [[mods]]
 modId = "upd8r"
@@ -10,7 +10,7 @@ displayName = "upd8r"
 logoFile = "icon.png"
 authors = "Tki_sor"
 description = '''
-
+More Powerful Modpack Update Check Mod.
 '''
 
 [[dependencies.upd8r]]

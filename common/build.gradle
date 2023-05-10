@@ -4,7 +4,39 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc:fabric-language-kotlin:${fabric_kotlin_version}"
     modImplementation "me.shedaniel.cloth:cloth-config-fabric:${cloth_config_version}"
+    modCompileOnly "curse.maven:fancymenu-forge-367706:4503132"
+
+    modImplementation "dev.latvian.mods:kubejs-fabric:${rootProject.kubejs_version}"
+    modImplementation "dev.latvian.mods:rhino:${rootProject.rhino_version}"
+
+    // Mixin Dependencies
+    compileOnly 'org.ow2.asm:asm-tree:9.4'
+    compileOnly 'org.ow2.asm:asm-commons:9.4'
+    compileOnly 'org.ow2.asm:asm-util:9.4'
+    compileOnly 'org.spongepowered:mixin:0.8.5'
 }
+
+//loom {
+//    mixin {
+//        defaultRefmapName = "upd8r.refmap.json"
+//        useLegacyMixinAp = true
+//    }
+//
+//    runs {
+//        client {
+//            client()
+//            setConfigName("Common Client")
+//            ideConfigGenerated(false)
+//            runDir("run")
+//        }
+//        server {
+//            server()
+//            setConfigName("Common Server")
+//            ideConfigGenerated(false)
+//            runDir("run")
+//        }
+//    }
+//}
 
 architectury {
     common()
@@ -21,5 +53,11 @@ publishing {
     // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
     repositories {
         // Add repositories to publish to here.
+        maven {
+            url "https://cursemaven.com"
+            content {
+                includeGroup "curse.maven"
+            }
+        }
     }
 }
