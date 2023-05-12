@@ -42,9 +42,7 @@ object ModEventSubscriber {
                 newBrands.addAll(brands)
 
                 val upd8rInfo = mutableListOf<String>()
-                Upd8rConfig().get()?.currentVersion?.let {
-                    upd8rInfo.add("当前版本：${it.versionName} or ${it.versionCode}")
-                }
+                upd8rInfo.add("当前版本：${Upd8rConfig().get().currentVersion.versionName} or ${Upd8rConfig().get().currentVersion.versionCode}")
                 upd8rInfo.add("最新版本：${Upd8rData.versionName} or ${Upd8rData.versionCode}")
 
                 newBrands.addAll(upd8rInfo)

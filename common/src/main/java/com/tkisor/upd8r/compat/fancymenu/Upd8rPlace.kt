@@ -1,15 +1,16 @@
 package com.tkisor.upd8r.compat.fancymenu
 
 import com.tkisor.upd8r.Upd8r
+import com.tkisor.upd8r.annotation.UsedBy
 import com.tkisor.upd8r.api.InfoUtil
-import com.tkisor.upd8r.config.Upd8rConfig
 import com.tkisor.upd8r.data.Upd8rData
 import de.keksuccino.fancymenu.menu.placeholder.v2.DeserializedPlaceholderString
 import de.keksuccino.fancymenu.menu.placeholder.v2.Placeholder
 object Upd8rPlace {
+    @UsedBy("FancyMenuRegistry")
     class CurrentVersion : Placeholder("current_version") {
         override fun getReplacementFor(deserializedPlaceholderString: DeserializedPlaceholderString): String {
-            return Upd8rConfig().get().currentVersion.versionFormat
+            return InfoUtil.getCurrentVersion()
         }
 
         override fun getValueNames(): List<String>? {
@@ -21,7 +22,7 @@ object Upd8rPlace {
         }
 
         override fun getDescription(): List<String> {
-            return listOf("获取当前版本")
+            return listOf("Get Current Version.")
         }
 
         override fun getCategory(): String {
@@ -35,6 +36,7 @@ object Upd8rPlace {
         }
     }
 
+    @UsedBy("FancyMenuRegistry")
     class LatestVersion : Placeholder("latest_version") {
         override fun getReplacementFor(deserializedPlaceholderString: DeserializedPlaceholderString): String {
             return Upd8rData.versionFormat?:""
@@ -49,7 +51,7 @@ object Upd8rPlace {
         }
 
         override fun getDescription(): List<String> {
-            return listOf("获取最新版本")
+            return listOf("Get Latest Version.")
         }
 
         override fun getCategory(): String {
@@ -63,6 +65,7 @@ object Upd8rPlace {
         }
     }
 
+    @UsedBy("FancyMenuRegistry")
     class UpdateLink : Placeholder("update_link") {
         override fun getReplacementFor(deserializedPlaceholderString: DeserializedPlaceholderString): String {
             return InfoUtil.getUpdateURL()
@@ -77,7 +80,7 @@ object Upd8rPlace {
         }
 
         override fun getDescription(): List<String> {
-            return listOf("获取更新链接")
+            return listOf("Get Update Link.")
         }
 
         override fun getCategory(): String {

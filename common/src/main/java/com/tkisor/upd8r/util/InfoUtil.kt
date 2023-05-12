@@ -9,6 +9,7 @@ import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.HoverEvent
 import net.minecraft.network.chat.MutableComponent
 
+
 object InfoUtil {
     fun upd8rComponent(): MutableComponent {
         val component = Component.empty()
@@ -97,7 +98,10 @@ object InfoUtil {
 
     /**
      * 判断是否需要更新
+     *
+     * 打算放到 api 中
      */
+    @Deprecated("This method is deprecated. Use the api.InfoUtil.isUpd8r() or getIsUpd8r() instead.")
     fun isUpd8r(): Boolean? {
         val currentVersion = Upd8rConfig().get().currentVersion
         return when {

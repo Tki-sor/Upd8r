@@ -17,6 +17,10 @@ object Upd8rData {
     var welcomeMessage: WelcomeMessageData? = null
 
     init {
+        init()
+    }
+
+    private fun init() {
         val jsonObj = WebJsonUtil.getJsonObject()
         if (jsonObj.has("versionName")) {
             versionName = jsonObj["versionName"]?.asString
@@ -54,21 +58,8 @@ object Upd8rData {
         }
     }
 
-    fun updateData(jsonObj: JsonObject) {
-        if (jsonObj.has("versionName")) {
-            versionName = jsonObj["versionName"]?.asString
-        }
-        if (jsonObj.has("versionFormat")) {
-            versionFormat = jsonObj["versionFormat"]?.asString
-        }
-        if (jsonObj.has("changelogs")) {
-            val changelogsJson = jsonObj["changelogs"]?.asJsonObject!!
-            changelogs = ChangelogData(changelogsJson)
-        }
-        if (jsonObj.has("welcomeMessage")) {
-            val wmJson = jsonObj["welcomeMessage"]?.asJsonObject!!
-            welcomeMessage = WelcomeMessageData(wmJson)
-        }
+    fun updateData() {
+        init()
     }
 
     fun getUpdateURL(lang: String): String? {

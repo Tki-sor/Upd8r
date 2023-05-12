@@ -22,8 +22,8 @@ class Upd8rConfig: ConfigData {
     var baseCfg: BaseCfg = BaseCfg()
 
     class BaseCfg {
-        @Comment("\nIf this is set to false, the mod will not try to fetch the version data at all." +
-                "\nIt's a switch for modpack users that want to disable modpack version checking.")
+        @Comment("\nIf this is set to false, the mod will not provide information to the user if possible." +
+                "\nThis is an option for modpack players.")
         var enableVersionChecking = true
         @Comment("\nWhere the version data JSON will be fetched from, KEEP http:// or https://" +
                 "\nComparison will be attempted when multiple URLs are used")

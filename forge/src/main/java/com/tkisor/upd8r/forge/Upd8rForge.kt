@@ -17,5 +17,4 @@ class Upd8rForge {
 //        MinecraftForge.EVENT_BUS.register(ModEventSubscriber)
     }
 
-
 }
