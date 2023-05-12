@@ -8,6 +8,7 @@ import com.tkisor.upd8r.util.asString
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents
 import net.minecraft.network.chat.Component
+import net.minecraft.network.chat.TranslatableComponent
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.entity.Entity
@@ -20,8 +21,8 @@ class Upd8rFabric : ModInitializer {
         init()
         ServerEntityEvents.ENTITY_LOAD.register(ServerEntityEvents.Load { entity: Entity, world: ServerLevel ->
             if (Upd8rConfig().get().baseCfg.enableVersionChecking) {
-                val component = Component.empty()
-                component.append(Component.translatable(Upd8rData.welcomeMessage?.randomMessage()?.asString() ?: ""))
+                val component = TranslatableComponent("")
+                component.append(TranslatableComponent(Upd8rData.welcomeMessage?.randomMessage()?.asString() ?: ""))
 
                 val upd8rComponent = InfoUtil.upd8rComponent()
                 if (com.tkisor.upd8r.api.InfoUtil.getIsUpd8r() != 0) {
@@ -32,7 +33,7 @@ class Upd8rFabric : ModInitializer {
                     .append(component)
 
                 if (entity is ServerPlayer && entity !in playerList) {
-                    entity.sendSystemMessage(upd8rComponent)
+                    entity.sendMessage(upd8rComponent, entity.uuid)
                     playerList.add(entity)
                 }
             }

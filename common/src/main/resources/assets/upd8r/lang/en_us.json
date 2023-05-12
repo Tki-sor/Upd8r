@@ -6,5 +6,7 @@
   "text.upd8r.update_link": "§b§l§nUpdate Link§r",
   "text.upd8r.changelogs": "Changelogs:",
   "text.upd8r.update_link_tooltip": "§eClick to open update link!§r",
-  "text.upd8r.update_check_failed": "§cFailed to check for modpack update, please check your Internet connection. If you believe it's not your problem please report this to the modpack author.§r"
+  "text.upd8r.update_check_failed": "§cFailed to check for modpack update, please check your Internet connection. If you believe it's not your problem please report this to the modpack author.§r",
+  "text.upd8r.fancymenu.current_version.text": "Current Version",
+  "text.upd8r.fancymenu.latest_version.text": "Latest Version"
 }

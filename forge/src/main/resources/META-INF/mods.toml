@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[43,)"
+loaderVersion = "[40,)"
 license = "MIT"
 issueTrackerURL = "https://github.com/Tki-sor/Upd8r/issues"
 
@@ -16,20 +16,20 @@ More Powerful Modpack Update Check Mod.
 [[dependencies.upd8r]]
 modId = "forge"
 mandatory = true
-versionRange = "[43,)"
+versionRange = "[40,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.upd8r]]
 modId = "cloth_config"
 mandatory = true
-versionRange = "[8.0,)"
+versionRange = "[6.0,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.upd8r]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,1.20)"
+versionRange = "[1.18.2,1.19)"
 ordering = "NONE"
 side = "BOTH"

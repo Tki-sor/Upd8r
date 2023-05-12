@@ -6,7 +6,6 @@
   "client": [
   ],
   "mixins": [
-    "Upd8rKubejs"
   ],
   "injectors": {
     "defaultRequire": 1

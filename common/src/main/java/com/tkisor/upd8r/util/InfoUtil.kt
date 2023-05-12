@@ -8,20 +8,20 @@ import net.minecraft.network.chat.ClickEvent
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.HoverEvent
 import net.minecraft.network.chat.MutableComponent
-
+import net.minecraft.network.chat.TranslatableComponent
 
 object InfoUtil {
     fun upd8rComponent(): MutableComponent {
-        val component = Component.empty()
+        val component = TranslatableComponent("")
         val instance = Language.getInstance()
         val langCode = Minecraft.getInstance().languageManager.selected.code
-        val updateLink = Component.translatable("text.upd8r.update_link")
+        val updateLink = TranslatableComponent("text.upd8r.update_link")
 
         when (isUpd8r()) {
             true -> {
                 component
-                    .append(Component.translatable("text.upd8r.separator")).append("\n")
-                    .append(Component.translatable("text.upd8r.update_chat_message_title")).append("\n")
+                    .append(TranslatableComponent("text.upd8r.separator")).append("\n")
+                    .append(TranslatableComponent("text.upd8r.update_chat_message_title")).append("\n")
                     .append(
                         instance.getOrDefault("text.upd8r.current_version")
                             .format(Upd8rConfig().get().currentVersion.versionName)
@@ -32,15 +32,15 @@ object InfoUtil {
 
                 if (Upd8rData.changelogs != null) {
                     component
-                        .append(Component.translatable("text.upd8r.changelogs")).append("\n")
+                        .append(TranslatableComponent("text.upd8r.changelogs")).append("\n")
                         .append(Upd8rData.changelogs?.asString() ?: "")
                 }
             }
 
             null -> {
                 component
-                    .append(Component.translatable("text.upd8r.separator")).append("\n")
-                    .append(Component.translatable("text.upd8r.update_check_failed")).append("\n")
+                    .append(TranslatableComponent("text.upd8r.separator")).append("\n")
+                    .append(TranslatableComponent("text.upd8r.update_check_failed")).append("\n")
                     .append(
                         instance.getOrDefault("text.upd8r.current_version")
                             .format(Upd8rConfig().get().currentVersion.versionFormat)
@@ -65,7 +65,7 @@ object InfoUtil {
                     it.withHoverEvent(
                         HoverEvent(
                             HoverEvent.Action.SHOW_TEXT,
-                            Component.translatable("text.upd8r.update_link_tooltip")
+                            TranslatableComponent("text.upd8r.update_link_tooltip")
                         )
                     )
                 }
@@ -85,13 +85,13 @@ object InfoUtil {
                     it.withHoverEvent(
                         HoverEvent(
                             HoverEvent.Action.SHOW_TEXT,
-                            Component.translatable("text.upd8r.update_link_tooltip")
+                            TranslatableComponent("text.upd8r.update_link_tooltip")
                         )
                     )
                 }
                 component.append(updateLink).append("\n")
             }
-            component.append(Component.translatable("text.upd8r.separator"))
+            component.append(TranslatableComponent("text.upd8r.separator"))
         }
         return component
     }

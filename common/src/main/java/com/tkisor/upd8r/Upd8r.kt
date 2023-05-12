@@ -1,7 +1,6 @@
 package com.tkisor.upd8r
 
 import com.tkisor.upd8r.config.Upd8rConfig
-import dev.architectury.injectables.annotations.ExpectPlatform
 import me.shedaniel.autoconfig.AutoConfig
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer
 

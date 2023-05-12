@@ -1,8 +1,8 @@
 {
   "pack": {
-    "description": "upd8r resources",
-    "pack_format": 9,
-    "forge:resource_pack_format": 9,
-    "forge:data_pack_format": 10
+    "description": "Upd8r resources",
+    "pack_format": 8,
+    "forge:resource_pack_format": 8,
+    "forge:data_pack_format": 9
   }
 }

@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.tkisor.upd8r.mixin.forge",
+  "package": "com.tkisor.upd8r.mixin.fabric",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
